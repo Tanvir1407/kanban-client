@@ -7,7 +7,7 @@ export default function Board() {
     const [Data, setData] = useState(null)
 
     useEffect(() => {
-        fetch("http://localhost:5500")
+        fetch("https://kanban-server-topaz.vercel.app")
             .then(res =>res.json())
             .then(data =>setData(data))
              
