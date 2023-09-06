@@ -1,13 +1,41 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+@layer components{
+    .icon-classes{
+        @apply text-[#1E2952] mx-[8px] cursor-pointer hover:text-[#00008c] duration-100
+    }
+    .search-bar{
+        @apply border-2 px-3 py-[2px] mr-10 rounded-md focus:outline-none
+    }
+    .section-heading{
+        @apply text-slate-600 text-[16px] font-medium uppercase py-3 
+    }
+    .side-nav{
+        @apply flex items-center text-slate-500 bg-gray-50 p-2 my-[10px] mx-[20px] cursor-pointer rounded hover:bg-blue-50
+    }
+    .task-icon{
+        @apply absolute  top-[-12px] text-slate-600 bg-slate-100 p-[3px] rounded cursor-pointer hidden duration-200 group-hover:inline-block 
+    }
+    .loading-card-column{
+        @apply bg-slate-50 w-[300px] h-screen mx-2 mt-8 rounded
+    }
+    .loading-heading{
+        @apply bg-gray-100 w-[260px] h-[40px] mx-auto my-5 rounded
+    }
+    .loading-task-card{
+        @apply bg-gray-100 w-[260px] h-[120px] mx-auto my-5 rounded
+    }
+    .group-column{
+        @apply w-[300px] bg-gray-50 rounded-md px-3 py-3 mx-2 
+    }
+    .addtask-btn{
+        @apply bg-white w-full pb-2 pt-1 relative rounded-sm shadow-md text-slate-600 font-medium
+    }
+    .form-card{
+        @apply w-[300px] bg-gray-100 drop-shadow rounded-lg absolute top-[-86px] left-[-12px] z-[9999] 
+    }
 }
