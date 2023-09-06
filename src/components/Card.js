@@ -25,7 +25,7 @@ export default function Card({
     handleEditTask(itemId, name, desc);
     setEditModal(false);
 
-    fetch("http://localhost:5500/edititem", {
+    fetch("https://kanban-server-topaz.vercel.app/edititem", {
       method: "PUT",
       headers: {
         "content-type": "application/json",
