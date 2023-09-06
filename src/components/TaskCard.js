@@ -15,7 +15,7 @@ export default function TaskCard({
     const groupId = _id;
     deleteTask(id, groupId);
 
-    fetch("http://localhost:5500/removeItem", {
+    fetch("https://kanban-server-topaz.vercel.app/removeItem", {
       method: "DELETE",
       headers: {
         "content-type": "application/json",
