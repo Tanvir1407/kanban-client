@@ -34,7 +34,7 @@ export default function DragAndDrop({ Data }) {
       reorderedStores.splice(destinationIndex, 0, removedStore);
       setStores(reorderedStores);
       //update database
-      fetch("http://localhost:5500/update", {
+      fetch("https://kanban-server-topaz.vercel.app/update", {
         method: "POST",
         headers: {
           'content-type':'application/json'
@@ -81,7 +81,7 @@ export default function DragAndDrop({ Data }) {
     setStores(newStores);
     setTask(true)
     //update task card reorder and new destination functionality in database
-    fetch("http://localhost:5500/update", {
+    fetch("https://kanban-server-topaz.vercel.app/update", {
       method: "POST",
       headers: {
         'content-type':'application/json'
@@ -118,7 +118,7 @@ export default function DragAndDrop({ Data }) {
           }
 
         todo.items.push(newTask)
-        fetch("http://localhost:5500/add", {
+        fetch("https://kanban-server-topaz.vercel.app/add", {
           method: "POST",
           headers: {
             'content-type': 'application/json'
