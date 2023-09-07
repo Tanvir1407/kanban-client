@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { DragDropContext, Draggable, Droppable } from "react-beautiful-dnd";
-import TaskCard from "./TaskCard";
 import { ToastContainer, toast } from 'react-toastify';
+import TaskCard from "./TaskCard";
 
 export default function DragAndDrop({ Data }) {
 
@@ -34,7 +34,7 @@ export default function DragAndDrop({ Data }) {
       reorderedStores.splice(destinationIndex, 0, removedStore);
       setStores(reorderedStores);
       //update database
-      fetch("https://kanban-server-topaz.vercel.app/update", {
+      fetch("https://kanban-server-three.vercel.app/update", {
         method: "POST",
         headers: {
           'content-type':'application/json'
@@ -81,7 +81,7 @@ export default function DragAndDrop({ Data }) {
     setStores(newStores);
     setTask(true)
     //update task card reorder and new destination functionality in database
-    fetch("https://kanban-server-topaz.vercel.app/update", {
+    fetch("https://kanban-server-three.vercel.app/update", {
       method: "POST",
       headers: {
         'content-type':'application/json'
@@ -118,7 +118,7 @@ export default function DragAndDrop({ Data }) {
           }
 
         todo.items.push(newTask)
-        fetch("https://kanban-server-topaz.vercel.app/add", {
+        fetch("https://kanban-server-three.vercel.app/add", {
           method: "POST",
           headers: {
             'content-type': 'application/json'

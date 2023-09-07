@@ -1,6 +1,6 @@
 import { Droppable } from "react-beautiful-dnd";
-import Card from "./Card";
 import { toast } from "react-toastify";
+import Card from "./Card";
 
 export default function TaskCard({
   task,
@@ -15,7 +15,7 @@ export default function TaskCard({
     const groupId = _id;
     deleteTask(id, groupId);
 
-    fetch("https://kanban-server-topaz.vercel.app/removeItem", {
+    fetch("https://kanban-server-three.vercel.app/removeItem", {
       method: "DELETE",
       headers: {
         "content-type": "application/json",

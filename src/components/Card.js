@@ -1,7 +1,7 @@
-import { Draggable } from "react-beautiful-dnd";
-import { RiDeleteBin5Fill } from "react-icons/ri";
-import { BiEdit } from "react-icons/bi";
 import { useState } from "react";
+import { Draggable } from "react-beautiful-dnd";
+import { BiEdit } from "react-icons/bi";
+import { RiDeleteBin5Fill } from "react-icons/ri";
 import { toast } from "react-toastify";
 
 export default function Card({
@@ -25,7 +25,7 @@ export default function Card({
     handleEditTask(itemId, name, desc);
     setEditModal(false);
 
-    fetch("https://kanban-server-topaz.vercel.app/edititem", {
+    fetch("https://kanban-server-three.vercel.app/edititem", {
       method: "PUT",
       headers: {
         "content-type": "application/json",
