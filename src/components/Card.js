@@ -63,7 +63,7 @@ export default function Card({
     >
       {(provided) => (
         <div
-          className="bg-white my-2 p-3 rounded shadow group relative cursor-pointer"
+          className="bg-white my-2 p-3 rounded shadow group relative cursor-wait"
           {...provided.dragHandleProps}
           {...provided.draggableProps}
           ref={provided.innerRef}

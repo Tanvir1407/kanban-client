@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import DragAndDrop from "./DragAndDrop";
-import Loading from "./Loading";
 import LeftSideMenu from "./LeftSideMenu";
+import Loading from "./Loading";
 
 export default function Board() {
     const [Data, setData] = useState(null)

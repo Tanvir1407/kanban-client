@@ -25,6 +25,7 @@ export default function DragAndDrop({ Data }) {
 
     if (type === "group") {
       setColumn(true)
+      setTask(true)
       // if group column reorder
       const reorderedStores = [...stores];
       const sourceIndex = source.index;
@@ -45,6 +46,7 @@ export default function DragAndDrop({ Data }) {
       .then(data => {
         if (data.acknowledged && data.insertedCount === 3) {
           setColumn(false)
+          setTask(false)
         }
       })
       
@@ -116,8 +118,11 @@ export default function DragAndDrop({ Data }) {
         name,
         desc
           }
-
+        // when new task adding process run this time colum and task card drag disable  
+        setColumn(true)
+        setTask(true)
         todo.items.push(newTask)
+        
         fetch("https://kanban-server-three.vercel.app/add", {
           method: "POST",
           headers: {
@@ -128,6 +133,8 @@ export default function DragAndDrop({ Data }) {
         .then(res => res.json())
         .then(data => {
           if (data.acknowledged) {
+            setColumn(false)
+            setTask(false)
             toast.success('New Task Added!', {
               position: "top-right",
               autoClose: 1000,
@@ -195,7 +202,7 @@ export default function DragAndDrop({ Data }) {
                     isDragDisabled={column}
                   >
                     {(provided) => (
-                      <div>
+                      <div className="disabled:cursor-wait">
                         <div
                           className="group-column"
                           {...provided.dragHandleProps}
