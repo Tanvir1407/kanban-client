@@ -80,8 +80,9 @@ export default function DragAndDrop({ Data }) {
       items: newDestinationItems,
     };
     
-    setStores(newStores);
     setTask(true)
+    setColumn(true)
+    setStores(newStores);
     //update task card reorder and new destination functionality in database
     fetch("https://kanban-server-three.vercel.app/update", {
       method: "POST",
@@ -94,6 +95,7 @@ export default function DragAndDrop({ Data }) {
       .then(data => {
         if (data.acknowledged && data.insertedCount === 3) {
           setTask(false)
+          setColumn(false)
         }
       })
   };
