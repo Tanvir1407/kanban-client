@@ -1,8 +1,16 @@
-# Getting Started with Create React App
+# Task Management Board
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+ [Task Management Board](https://kanban-client-psi.vercel.app/) is a kanban project management system.Here task can be added, edited and deleted. 
 
-## Available Scripts
+## Frontend Technology
+"*" Tailwind
+"*" React
+## Backend Technology
+"*" express.js , node.js
+## database
+"*" MongoDB
+## Deploy
+"*" vercel
 
 In the project directory, you can run:
 

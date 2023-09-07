@@ -218,7 +218,7 @@ export default function DragAndDrop({ Data }) {
                               store.name === "To Do" ? "block" : "hidden"
                             }`}
                           >
-                            <button onClick={()=>setAddTaskModal(true)} className="addtask-btn">
+                            <button disabled={task} onClick={()=>setAddTaskModal(true)} className="addtask-btn">
                               <span className="text-[20px]">+</span>
                               Add Task
                             
