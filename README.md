@@ -2,77 +2,19 @@
 
  [Task Management Board](https://kanban-client-psi.vercel.app/) is a kanban project management system.Here task can be added, edited and deleted. 
 
-## Frontend Technology
+### Frontend Technology
 * Tailwind
 * React
-## Backend Technology
+### Backend Technology
 * express.js , node.js
-## database
+### database
 * MongoDB
-## Deploy
+### Deploy
 * vercel
 
-In the project directory, you can run:
+![download (15)](https://github.com/Tanvir1407/kanban-client/assets/93488008/9a515525-6a49-4ffb-9da9-0bc9ee11aa88)
 
-### `npm start`
+![download (17)](https://github.com/Tanvir1407/kanban-client/assets/93488008/9c571a5c-41d6-4a58-bed3-ee6fd5752b51)
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
-
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## About Task Managment Board
+Task managment board has three columns `To Do` `In process` `Done` . There is a button called `+Add Task` in the To Do column, the user can add a new task by clicking this button.After clicking the `+Add Task` button , a form will open, there will be two text input fields named title and description.By clicking on add task button with title and description, new task will be added. User can change task location from `To Do` to `In process` or `Done` by dragging and dropping. When the user hover or click on a task they will see two icons on the top right side of the task card, One is the `edit` icon and other is the `delete` icon. The task card can be edited by clicking on the edit icon and task card will be deleted by clicking on the delete icon.
