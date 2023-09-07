@@ -3,14 +3,14 @@
  [Task Management Board](https://kanban-client-psi.vercel.app/) is a kanban project management system.Here task can be added, edited and deleted. 
 
 ## Frontend Technology
-"*" Tailwind
-"*" React
+* Tailwind
+* React
 ## Backend Technology
-"*" express.js , node.js
+* express.js , node.js
 ## database
-"*" MongoDB
+* MongoDB
 ## Deploy
-"*" vercel
+* vercel
 
 In the project directory, you can run:
 
