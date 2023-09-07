@@ -7,7 +7,6 @@ export default function DragAndDrop({ Data }) {
 
   const [stores, setStores] = useState(Data);
   const [addTaskModal, setAddTaskModal] = useState(false);
-  const [column, setColumn] = useState(false)
   const [task, setTask] = useState(false)
   const handleDragDrop = (result) => {
     const { source, destination, type } = result;
@@ -24,7 +23,6 @@ export default function DragAndDrop({ Data }) {
     }
 
     if (type === "group") {
-      setColumn(true)
       setTask(true)
       // if group column reorder
       const reorderedStores = [...stores];
@@ -45,7 +43,6 @@ export default function DragAndDrop({ Data }) {
       .then(res => res.json())
       .then(data => {
         if (data.acknowledged && data.insertedCount === 3) {
-          setColumn(false)
           setTask(false)
         }
       })
@@ -81,7 +78,6 @@ export default function DragAndDrop({ Data }) {
     };
     
     setTask(true)
-    setColumn(true)
     setStores(newStores);
     //update task card reorder and new destination functionality in database
     fetch("https://kanban-server-three.vercel.app/update", {
@@ -95,7 +91,6 @@ export default function DragAndDrop({ Data }) {
       .then(data => {
         if (data.acknowledged && data.insertedCount === 3) {
           setTask(false)
-          setColumn(false)
         }
       })
   };
@@ -121,7 +116,6 @@ export default function DragAndDrop({ Data }) {
         desc
           }
         // when new task adding process run this time colum and task card drag disable  
-        setColumn(true)
         setTask(true)
         todo.items.push(newTask)
         
@@ -135,7 +129,6 @@ export default function DragAndDrop({ Data }) {
         .then(res => res.json())
         .then(data => {
           if (data.acknowledged) {
-            setColumn(false)
             setTask(false)
             toast.success('New Task Added!', {
               position: "top-right",
@@ -201,7 +194,7 @@ export default function DragAndDrop({ Data }) {
                     draggableId={store._id}
                     key={store._id}
                     index={index}
-                    isDragDisabled={column}
+                    isDragDisabled={true}
                   >
                     {(provided) => (
                       <div className="disabled:cursor-wait">
